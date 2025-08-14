@@ -21,3 +21,25 @@ Düzenle
 ---
 
 ### **5️⃣ .gitignore**
+pycache/
+*.pyc
+*.pyo
+*.pyd
+.env
+*.csv
+
+
+---
+
+### **6️⃣ data/student_data.csv** (Örnek veri)
+
+
+student_id,gender,subject,score
+1,M,Math,85
+2,F,Math,92
+3,M,Math,78
+4,F,Math,88
+5,M,Science,90
+6,F,Science,95
+7,M,Science,80
+8,F,Science,89
