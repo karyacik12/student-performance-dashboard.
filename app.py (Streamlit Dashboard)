@@ -1,0 +1,21 @@
+import pandas as pd
+import streamlit as st
+import plotly.express as px
+
+# Load data
+df = pd.read_csv("data/student_data.csv")
+
+st.title("Student Performance Analysis Dashboard")
+
+# Sidebar filter
+gender = st.sidebar.multiselect("Select Gender", df["gender"].unique(), default=df["gender"].unique())
+subject = st.sidebar.selectbox("Select Subject", df["subject"].unique())
+
+filtered_df = df[(df["gender"].isin(gender)) & (df["subject"] == subject)]
+
+# Plot
+fig = px.box(filtered_df, x="gender", y="score", color="gender", title=f"{subject} Scores by Gender")
+st.plotly_chart(fig)
+
+# Display data
+st.dataframe(filtered_df)
