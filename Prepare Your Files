@@ -1,0 +1,8 @@
+student-performance-dashboard/
+│
+├── app.py
+├── analysis.py
+├── data/student_data.csv
+├── requirements.txt
+├── README.md
+└── .gitignore
